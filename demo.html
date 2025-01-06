@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* styles.css */
+
+/* Basic styles for the nav bar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-right:0px;
+    /* padding: 10px; */
+}
+
+.nav-links li {
+    margin: 0 15px;
+    padding-left: 30px;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.nav-links span a{
+    /* background-color: red; */
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    /* transform: translateX(40deg); */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-links a:hover{
+    background-color: red;
+    /* text-decoration: underline; */
+    border-radius: 5px;
+    padding: 10px;
+    transform: scale(1s);
+    transition: 1s ease;
+}
+
+/* Hamburger menu for small screens */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 0px;
+    /* width: 200px; */
+}
+
+.hamburger span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width:200px;
+        text-align: left;
+        position: absolute;
+        top: 35px;
+        left: 0px;
+        background-color: #333;
+        z-index: 999;
+        /* background: transparent;
+        backdrop-filter: blur(5px); */
+        /* background-color: red; */
+        color: black;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        padding: 20px;
+    }
+    .nav-links a:hover{
+    background-color: red;
+    text-decoration: underline;
+    padding: 10px;
+    /* width: 100%; */
+}
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+}
+
+
+.projects-section {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Featured Projects */
+.featured-projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    width: 48%;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),-5px -5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-details {
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-location,
+.project-completion,
+.project-type {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.project-overview {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.key-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.key-features li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 3px 3px 4px red,-3px -3px 4px red;
+    /* border: 1px solid red; */
+}
+
+/* Additional Projects */
+.additional-projects {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.project-small img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.project-small img:hover{
+    border: 2px solid red;
+}
+
+.project-small p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.why-choose-us h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-choose-us li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+.section-title{
+    font-size: 55px;
+    color: red;
+    font-weight: bolder;
+    border-bottom: 3px solid #222;
+    padding-bottom: 20px;
+}
+
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt=""></a>
+            </div>
+            <ul class="nav-links">
+                <li><span><a href="index.html">Home</a></span></li>
+                <li><a href=" #ab">About</a></li>
+                <li><a href="#os">Services</a></li>
+                <li><a href="demo.html">Projects</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#cont">Client</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span>X</span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">|Our Projects</h2>
+            <p class="section-description">
+                At [Your Company Name], we take pride in delivering high-quality construction projects that exceed expectations. 
+                Whether it's residential, commercial, industrial, or civil construction, we have successfully completed a variety of projects.
+            </p>
+    
+            <div class="featured-projects">
+                <div class="project-card">
+                    <img src="f.jpg" alt="Project 1">
+                    <div class="project-details">
+                        <h3 class="project-title">[Project Name 1]</h3>
+                        <p class="project-location">Location: [City, State]</p>
+                        <p class="project-completion">Completion Date: [Month, Year]</p>
+                        <p class="project-type">Project Type: [Residential/Commercial/etc.]</p>
+                        <p class="project-overview">A brief description of the project, including goals and unique challenges overcome during construction.</p>
+                        <ul class="key-features">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                        <p><strong>Client:</strong> [Client Name]</p>
+                        <p><strong>Scope:</strong> [Scope of Work]</p>
+                        <p><strong>Size:</strong> [Size/Area]</p>
+                        <p><strong>Budget:</strong> [Budget]</p>
+                    </div>
+                </div>
+    
+                <!-- Repeat the same structure for other projects -->
+                <div class="project-card">
+                    <img src="f2.jpg" alt="Project 2">
+                    <div class="project-details">
+                        <h3 class="project-title">[Project Name 2]</h3>
+                        <p class="project-location">Location: [City, State]</p>
+                        <p class="project-completion">Completion Date: [Month, Year]</p>
+                        <p class="project-type">Project Type: [Residential/Commercial/etc.]</p>
+                        <p class="project-overview">A brief description of the project, including goals and unique challenges overcome during construction.</p>
+                        <ul class="key-features">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                        <p><strong>Client:</strong> [Client Name]</p>
+                        <p><strong>Scope:</strong> [Scope of Work]</p>
+                        <p><strong>Size:</strong> [Size/Area]</p>
+                        <p><strong>Budget:</strong> [Budget]</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="additional-projects">
+                <h3>Additional Projects</h3>
+                <div class="projects-grid">
+                    <div class="project-small">
+                        <img src="f1.jpg" alt="Project Small 1">
+                        <p>[Project Name 1]</p>
+                    </div>
+                    <div class="project-small">
+                        <img src="c3.jpg" alt="Project Small 2">
+                        <p>[Project Name 2]</p>
+                    </div>
+                    <!-- Add more small projects here -->
+                </div>
+            </div>
+    
+            <div class="why-choose-us">
+                <h3>Why Choose Us for Your Next Project?</h3>
+                <ul>
+                    <li><strong>Experience:</strong> [Years of experience]</li>
+                    <li><strong>Expertise:</strong> [Specializations]</li>
+                    <li><strong>Quality:</strong> [Commitment to excellence]</li>
+                    <li><strong>Sustainability:</strong> [Focus on sustainability]</li>
+                    <li><strong>Innovation:</strong> [Cutting-edge technology]</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+  
+        // script.js
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+    </script>
+    
+</body>
+</html>

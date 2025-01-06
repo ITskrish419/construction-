@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<style>
+/*---------------------------------------------------------------CSS CODE STARTS-----------------------------------------------------------------------*/
+    *{
+        top: 0px;
+        padding: 0px;
+        margin: 0px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    body{
+        width:100%;
+    }
+    @media (max-width:1024px){
+        body{
+            width: 1200px;
+        }
+    }
+                                                        /* HEADER CSS STARTS */
+    .header{
+        left: 0px;
+        top: 0px;
+        background-color: black;
+        background-image: url(f.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        height: 600px;
+        backdrop-filter: blur(10px);
+        text-align: center;
+        animation: change 10s infinite ease-in-out;
+    }
+    @keyframes change{
+        0%{
+            background-image: url(c3.jpg);
+        }
+        50%{
+            background-image: url(f.jpg);
+        }
+        100%{
+            background-image: url(b9.jpeg);
+        }
+    }
+    @media (max-width:320px){
+        .header{
+            
+        }
+    }
+    .nav{
+        position:sticky;
+        top: 0px;
+        background-color: white;
+        box-shadow: 3px 3px 5px black;
+        background: transparent;
+        /* border-radius: 20px; */
+        /* margin-top: 50px; */
+    }
+    .nav ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .nav li{
+        height: 50px;
+    }
+    .nav ul li span a{
+        /* border: 1px solid tomato; */
+        /* background-color:#3337; */
+        /* text-decoration: underline; */
+    }
+
+    .nav img{
+        margin-left: 0px;
+        margin-top: 10px;
+        height: 50px;
+        width: 150px;
+        /* background-color:rgb(214, 200, 90); */
+    }
+    .nav a{
+        height: 70%;
+        padding:  30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color:white;
+        /* color:#ff6347; */
+        /* border: 1px solid black; */
+        /* background-color: #ff6347; */
+        font-weight: bolder;
+        /* border-radius: 20px; */
+    }
+    .nav a:hover{
+        /* padding:30px; */
+        /* background-color:rgba(98,98,254); */
+        background-color: #ff6347;
+        color: #fff;
+        font-weight: bolder;
+        /* font-size: 18px; */
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .nav li:first-child{
+        margin-right: auto;
+    }
+    /* .nav.sidebar{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        height: 100vh;
+        width: 250px;
+        z-index:999 ;
+        background-color: rgba(255,255,255,0.2);
+        box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        backdrop-filter: blur(10px);
+    }
+    .sidebar li{
+        width: 100%;
+    }
+    .sidebar a{
+        width: 100%;
+    } */
+    .nav .sidebar{
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        height:600px;
+        width: 250px;
+        background-color: rgba(255,255,255,0.2);
+        display:none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        z-index: 999;
+        box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+        backdrop-filter: blur(10px);
+     }
+    .nav .sidebar li{
+        padding-top: 10px;
+        width: 100%;
+        /* transform: translateY(10px); */
+    }
+    .nav .sidebar a{
+        font-size: 20px;
+        font-weight: bolder;
+        width: 100%;
+        /* background-color: black; */
+    } 
+    /* .nav .sidebar a:hover{
+        transform:translateX(5px);
+        transition: .5s ease-in-out;
+    } */
+    .nav  button{
+        background: transparent;
+        margin-top: 10px;
+        font-size: 30px;
+        border: none;
+        color: #fff;
+        font-weight: bolder;
+        margin-right: 20px;
+        /* background-color: #f07e6a; */
+        cursor: pointer;
+    }
+    .nav button:hover{
+        color: #f18930;
+    }
+    .r1{
+        height: 400px;
+        width: 100%;
+        margin-top: 50px;
+        color: white;
+        /* overflow: hidden; */
+    }
+    .r1 img{
+        margin-top: 150px;
+        margin-left:200px;
+        border-radius: 20px;
+        height: 300px;
+        width: 400px;
+        box-shadow: 5px 5px 10px black;
+    }
+    .r1 img:hover{
+        /* filter: blur(1px); */
+        height: 320px;
+        width: 420px;
+        /* transform: translatex(30px); */
+        box-shadow: 5px 5px 10px rgb(241, 214, 10),-5px -5px 10px rgb(241, 214, 10) ;
+
+    }
+    .r1 h1{
+        /* color: rgb(241, 214, 10); */
+        font-weight: bolder;
+        font-size: 40px;
+        margin-left: 40px;
+        margin-top: 50px;
+    }
+
+    .r1 p{
+        font-size: 30px;
+        font-weight: bolder;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+    .r1 button{
+        width: 200px;
+        height: 50px;
+        margin-left: 40px;
+        margin-top: 40px;
+        background: transparent;
+        background-color: #ff6347;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 25px;
+        box-shadow: 5px 5px 10px black;
+        font-weight: bolder;
+        border: none;
+    }
+    .r1 button a:hover{
+        color: rgb(241, 214, 10);
+        font-size: 30px;
+        font-weight: bolder;
+        cursor: pointer;
+        /* box-shadow: 5px 5px 10px #ff6347, -5px -5px 10px #ff6347; */
+    }
+    .r1 button a{
+        text-decoration: none;
+        color:#fff;
+        font-size: 25px;
+    }
+    .r1 h4{
+        margin-top: 20px;
+        margin-left: 40px;
+        font-weight: bolder;
+        font-size: 25px;
+        color: rgb(241, 214, 10) ;
+    }
+    .r1  span{
+        color: #fff;
+        font-weight: normal;
+        font-size: 25px;
+    }
+    @media(max-width:800px){
+        .hideonmobile{
+            display: none;
+        }
+    }
+                                                    /* HEADER CSS ENDED */
+
+                                                  /* CONTAINER CSS STARTS */
+    /* #cont1{
+        width: 100%;
+    }
+    @media (min-width:1024px){
+        #cont1{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    } */
+                                                    
+
+    .box{
+        /* width: 1000px; */
+        margin-top:0px;
+        height: 300px;
+        padding: 20px;
+        /* background-color: blue; */
+        color: white;
+        /* font-size: 18px; */
+        display: grid;
+        text-align: center;
+        animation: appear  linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+   
+    }
+    @keyframes appear{
+        from{
+            opacity: 0;
+            scale: 0.5;
+        }
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+    .box i{
+        text-align: center;
+        color: rgb(241, 214, 10);
+        font-size: 50px;
+    }
+    .box h3{
+        margin-top: 50px;
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+    }
+    .box p{
+        margin-top: 25px;
+        color: black;
+        text-align: center;
+    }
+                                                    /* CONTAINER CSS ENDED */
+
+                                                    /* ABOUT US CSS STARTS */
+
+    .hero{
+        background-color: #f8f8f8;
+        overflow: hidden;
+        animation: appear  linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+    @keyframes appear{
+        from{
+            opacity: 0;
+            scale: 0.5;
+        }
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+
+    .heading h1{
+        /* background:linear-gradient(#ff6347,yellow); */
+        color:#ff6347;
+        font-size: 55px;
+        text-align: center;
+        margin-top: 40px;
+        /* margin-inline: auto; */
+        overflow: hidden;
+        white-space: nowrap;
+        /* border-right: 1px solid; */
+        animation: typing 1s steps(22) forwards, blink 3s step-end infinite;
+
+    }
+    @keyframes typing{
+        from{
+            width: 0;
+        }
+        to{
+            width: 100%;
+        }
+    }
+    @keyframes blink{
+        50%{
+            border-color: transparent;
+        }
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin:65px auto;
+    }
+    .content{
+        flex: 1;
+        width: 600px;
+        margin: 0px 25px;
+        animation: fadeInUp 2s ease;
+    }
+    .content h2{
+        font-size: 38px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    .content p{
+        font-size: 24px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+        color: #666;
+    }
+    .contentimg{
+        flex: 1;
+        width: 600px;
+        margin: auto;
+        animation: fadeInRight 2s ease;
+    }
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .content button{
+        display: inline-block;
+        background-color: #ff4500;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 5px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .content button:hover{
+        background-color: #ff6347;
+        transform: scale(1.1);
+    }
+    @media (max-width:600px){
+        .heading h1{
+            font-size: 45px;
+            margin-top: 30px;
+        }
+        .hero{
+
+            margin: 0px;
+            width: 100%;
+        }
+        .container{
+            width: 100%;
+            flex-direction: column;
+            /* margin-left: 200px; */
+            margin: 0px;
+            /* padding: 0px 40px; */
+        }
+        .content{
+            width: 100%;
+            margin: 35px 0px;
+        }
+        .content h2{
+            font-size: 30px;
+        }
+        .content p{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .content button{
+            font-size: 16px;
+            padding: 8px 16px;
+        }
+        .contentimg{
+            width: 100%;
+        }
+    }
+    @keyframes fadeInUp{
+        0%{
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    @keyframes fadeInRight{
+        0%{
+            opacity: 0;
+            transform: translatex(-50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translatex(0px);
+        }
+    }
+                                                    /* ABOUT US CSS ENDED */
+
+                                                 /* OUR SERVICES CSS STARTS */
+
+     .wrapper{
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fafafa;
+        animation: appear  linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+     }
+     @keyframes appear{
+        from{
+            opacity: 0;
+            scale: 0.5;
+        }
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+     .wrapper h1{
+        text-align: center;
+        color:#ff6347;
+        font-size:55px;
+        margin: 25px;
+        /* border-bottom: 2px solid #ff6347;
+        border-width: 100%;
+        padding-bottom: 10px; */
+
+     }
+
+     .content-box{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 1000px;
+        margin-top: 30px;
+     }
+     .card{
+        min-height: 220px;
+        width: 320px;
+        padding: 30px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        margin: 10px 4px;
+        box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+     }
+     .card i{
+        font-size: 40px;
+        margin: 20px;
+        color: #ff5727;
+     }
+     .card h3{
+        margin-bottom: 12px;
+        font-weight: 400;
+        color: #ff6347;
+     }
+     .card p{
+        color:#6c757d;
+        text-align: center;
+     }
+     .card:hover i,.card:hover p{
+        color: #fff;
+     }
+     .card:hover h3{
+        font-weight: 600;
+     }
+     .card:nth-child(1):hover{
+        background: linear-gradient(45deg,rgba(88,70,159,0.7)0%,rgba(136,113,199,0.7)),url(c3.jpg);
+        /* background-image: url("f.jpg"); */
+        background-size: cover;
+     }
+     .card:nth-child(2):hover{
+        background: linear-gradient(45deg,rgba(88,70,159,0.7)0%,rgba(136,113,199,0.7)),url(f.jpg);
+        background-size: cover;
+     }
+     .card:nth-child(3):hover{
+        background: linear-gradient(45deg,rgba(88,70,159,0.7)0%,rgba(136,113,199,0.7)),url(f1.jpg);
+        background-size: cover;
+     }
+     .card:nth-child(4):hover{
+        background: linear-gradient(45deg,rgba(88,70,159,0.7)0%,rgba(136,113,199,0.7)),url(f2.jpg);
+        background-size: cover;
+     }
+     .card:nth-child(5):hover{
+        background: linear-gradient(45deg,rgba(88,70,159,0.7)0%,rgba(136,113,199,0.7)),url(c3.jpg);
+        background-size: cover;
+     }
+     .card:nth-child(6):hover{
+        background: linear-gradient(45deg,rgba(88,70,159,0.7)0%,rgba(136,113,199,0.7)),url(c3.jpg);
+        background-size: cover;
+     }
+     @media(max-width:991px){
+        .wrapper{
+            padding: 25px;
+        }
+        .wrapper h1{
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        .content-box{
+            /* flex-direction: column; */
+            width: 100%;
+        }
+        .card{
+            min-width: 300px;
+            margin: 10px auto;
+        }
+     }
+                                                    /* OUR SERVICES CSS ENDED */
+
+                                                      /* CLIENT CSS STARTS */
+     .cont{
+        position: relative;
+        /* left:250px; */
+        top: 200px;
+        /* perspective: 500px; */
+        width: 100%;
+        height: 400px;
+        /* background-color: #3498db; */
+        background-color: #ff6347;
+        box-shadow: 0 5px 10px #3337;
+        /* background-image: url(b1.jpg); */
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        /* border-radius: 70px; */
+        animation: appear  linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+     }
+     @keyframes appear{
+        from{
+            opacity: 0;
+            scale: 0.5;
+        }
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+     .cont h1{
+        text-align: center;
+        /* color:#ff6347; */
+        color: #fff;
+        font-size:55px;
+        /* margin: 5px; */
+     }
+     .cont h2{
+        text-align: center;
+        margin-top: 20px;
+        color:black;
+        font-size:30px;
+
+     }
+     .cont .slide-cont .slide{
+        border-radius: 5px;
+        background: #fff;
+        box-shadow: 0 5px 10px #3337;
+        width: 1000px;
+        height: 200px;
+        margin: 10px;
+        position: relative;
+        left: 250px;
+        top: 40px;
+        transform-style: preserve-3d;
+        animation: slide .4s linear;
+     }
+     @keyframes slide{
+        0%{
+            transform: rotatex(180deg);
+        }
+     }
+     .cont .slide-cont .slide > *{
+        animation: slidecontent .2s linear .4s;
+     }
+     @keyframes slidecontent{
+        0%{
+            opacity: 0;
+            transform: scale(.5);
+        }
+     }
+     .cont .slide-cont .slide .icon{
+        position: absolute;
+        top: 10px; right: 15px;
+        font-size: 90px;
+        /* color: #3498db; */
+        color: #ff6347;
+     }
+     .cont .slide-cont .slide .user{
+        display: flex;
+        align-items: center;
+     }
+     .cont .slide-cont .slide img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+     }
+     .cont .slide-cont .slide .user .user-info h3{
+        color: #333;
+        font-size: 20px;
+     }
+     .cont .slide-cont .slide .user .user-info .stars i{
+        /* color: #3498db; */
+        color: #ff6347;
+        
+        font-size: 15px;
+     }
+     .cont .slide-cont .slide .text{
+        color: #333;
+        font-size: 14px;
+        padding-top: 15px;
+        font-style: italic;
+     }
+     .cont .slide-cont{
+        display: none;
+     }
+     .cont .slide-cont.active{
+        display: block;
+     }
+     .cont #next,
+     .cont #prev{
+        position: absolute;
+        top: 65%;
+        /* bottom: 50%; */
+        transform: translateY(-50%);
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        background: #fff;
+        color: #333;
+        cursor: pointer;
+        border-radius: 50%;
+        box-shadow: 0 5px 10px #3337;
+     }
+     .cont #next{
+        right:230px;
+     }
+     .cont #prev{
+        left: 230px;
+     }
+     .cont #next:hover,
+     .cont #prev:hover{
+        background-color: #333;
+        color: #fff;
+     }
+     @media (max-width:1024px){
+        .cont{
+            width: 100%;
+        }
+        .cont .slide-cont .slide{
+            margin-left: -250px;
+            width: 100%;
+        }
+        .cont #prev{
+            left: 0px;
+        }
+        .cont #next{
+            right: 0px;
+        }
+     }
+                                                     /* CLIENT CSS ENDED */
+
+                                                     /* CONTACT CSS STARTS */
+ 
+     .contact{
+        position: relative;
+        top: 200px;
+        min-height: 100vh;
+        padding: 50px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url(b1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: appear  linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+     }
+     @keyframes appear{
+        from{
+            opacity: 0;
+            scale: 0.5;
+        }
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+     .contact .contents{
+        max-width: 800px;
+        text-align: center;
+     }
+     .contact .contents h1{
+        font-size: 55px;
+        font-weight: 800;
+        color: #ff6347;
+     }
+     .contact .contents p{
+        /* font-size: 55px; */
+        font-weight: 800;
+        color: #fff;
+     }
+     .contain{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+     }
+     .contain .contactInfo{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+     }
+     .contain .contactInfo .boxe{
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+        /* background: transparent;
+        box-shadow: 0 5px 10px black; */
+     }
+     .contain .contactInfo .boxe .icon{
+        min-width: 60px;
+        height: 60px;
+        background:#ff6347;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 22px;
+     }
+     .contain .contactInfo .boxe .test{
+        display: flex;
+        margin-left: 20px;
+        font-size: 20px;
+        color: #fff;
+        flex-direction: column;
+        font-weight: 300;
+        /* font-weight: bolder; */
+     }
+     .contain .contactInfo .boxe .test h3{
+        text-align: left;
+        margin-left: 0px;
+        font-weight: bolder;
+        color:#ff6347;
+     }
+     .contactform{
+        border-radius: 20px;
+        width: 40%;
+        padding: 40px;
+        background: #fff;
+        box-shadow: 5px 5px 10px black, -5px -5px 10px black;
+        /* box-shadow: inset 8px 8px 8px #ecf0f3,inset -8px -8px 8px #ffffff; */
+        transition: 0.3s ease-in-out;
+
+     }
+     .contactform:hover{
+        transform: scale(1.1);
+        box-shadow: 5px 5px 10px #ff6347, -5px -5px 10px #ff6347;
+     }
+     .contactform h2{
+        
+        font-size: 30px;
+        /* color: #fff; */
+        font-weight:bolder;
+        color: #ff6347;
+     }
+     .contactform .inputbox{
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+     }
+     .contactform .inputbox input,.contactform .inputbox textarea{
+        width: 100%;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        border: none;
+        border-bottom: 2px solid #333;
+        /* border-radius: 25px; */
+        /* box-shadow: inset 8px 8px 8px #ecf0f3,inset -8px -8px 8px #ffffff; */
+        outline: none;
+        resize: none;
+     }
+     .contactform .inputbox span{
+        position: absolute;
+        left: 0;
+        /* padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        pointer-events: none;
+        transition: 0.5s; */
+        color: #666;
+     }
+     .contactform .inputbox input:focus ~ span,
+     .contactform .inputbox input:valid ~ span{
+        color: #e91e63;
+        font-size: 12px;
+        transform: translateY(-20px);
+     }
+     .contactform .inputbox input[type="submit"]{
+        width: 100px;
+        background-color: #ff6347;
+        /* box-shadow: 2px 2px 5px #ff6347,-2px -2px 5px #ff6347; */
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+     }
+     .contactform .inputbox input[type="submit"]:hover{
+        box-shadow: 2px 2px 5px #f07e6a,-2px -2px 5px #f07e6a;
+        /* font-size: 20px; */
+        font-weight: bolder;
+     }
+
+     @media (max-width:991px){
+        .contact{
+            padding: 50px;
+        }
+
+        .contain .contactInfo{
+            margin-bottom: 40px;
+        }
+        .contain .contactInfo,
+        .contactform{
+            width: 100%;
+        }
+
+     }
+                                                    /* CONTACT CSS ENDED */
+
+                                                     /* MAP CSS STARTS */
+     .map{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5em;
+        /* color: #ff6347; */
+        margin-top: 400px;
+        background-color: #f8f8f8;
+        animation: appear  linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+     }
+     @keyframes appear{
+        from{
+            opacity: 0;
+            scale: 0.5;
+        }
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+     .box1{
+        max-width: 600px;
+        text-align: left;
+     }
+     .box1 h1{
+        color: #ff6347;
+        font-weight: bolder;
+        font-size: 55px;
+        top: 0px;
+     }
+     .box1 p{
+        font-size: 30px;
+        margin-top: 50px;
+    
+     }
+     iframe{
+        border-radius: 2em;
+        border: none;
+        width: 500px;
+        height: 400px;
+        transition: 0.3s ease-in-out;
+     }
+     iframe:hover{
+        transform: scale(1.1);
+        box-shadow: 5px 5px 10px #ff6347, -5px -5px 10px #ff6347;
+     }
+                                                    /* MAP CSS ENDED */
+
+                                                    /* FOOTER CSS STARTS */
+     footer{
+        background: #343434;
+        padding-top: 50px;
+     }
+     .contains{
+        /* padding-left: 50px; */
+        width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+     }
+     /* .footer{
+        width: 33.3%;
+     } */
+     h3{
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #f8f8f8;
+     }
+     .footer-content{
+        padding-left: 100px;
+        /* margin-left: -100px; */
+     }
+     .footer-content p{
+        color: #f8f8f8;
+        width: 190px;
+        margin: auto;
+        padding: 7px;
+     }
+     .footer-content ul{
+        text-align: center;
+        text-decoration: none;
+        color: #f8f8f8;
+     }
+     .list{
+        padding: 0;
+     }
+     .footer-content ul li{
+
+        width: auto;
+        text-align: center;
+        list-style-type: none;
+        padding: 7px;
+        position: relative;
+     }
+     .footer-content ul li a{
+        color: #f8f8f8;
+        text-decoration: none;
+
+     }
+
+     .footer-content li::before{
+        content: '';
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top:100%;
+        width: 0;
+        height: 2px;
+        background: #f18930;
+        transition-duration: .5s;
+     }
+     .footer-content li:hover::before{
+        width: 70px;
+     }
+     .footer-content i{
+        text-align: center;
+        padding: 0;
+     }
+     .footer-content li{
+        /* display: inline-block; */
+        text-align: center;
+        padding: 5px;
+     }
+     .footer-content li a {
+        list-style-type: none;
+     }
+     .footer-content li a i{
+        font-size: 20px;
+        list-style-type: none;
+     }
+     .footer-content1 img{
+        width: 200px;
+        height: 100px;
+        margin-left: -180px;
+        margin-top:50px;
+     }
+     .button-bar{
+        background: #f18930;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+     }
+     .button-bar p{
+        color: #343434;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+        font-weight: bolder;
+     }
+                                                     /* FOOTER CSS ENDED */
+
+
+                                                    /* WHATSAPP CSS STARTS */
+     .whatsapp{
+        position: fixed;
+        left: 0px;
+        top: 600px;
+        padding: 24px;
+
+     }
+
+     .whatsapp .whatsapp-btn{
+        font-size: 50px;
+        color: #25d366;
+        display: inline-block;
+        transition: 400ms;
+        /* border-radius: 50%; */
+ 
+     }
+     .whatsapp .whatsapp-btn:hover{
+        /* box-shadow: 5px 5px 10px #25d366, -5px -5px 10px #25d366; */
+        transform: scale(1.2);
+
+     }
+     .whatsapp span{
+        font-size: 20px;
+        position: absolute;
+        left: 4px;
+        top: 0;
+        /* left: 20px; */
+        font-family: sans-serif;
+        font-weight: bolder;
+        color: #075e54;
+        transform: rotateZ(20deg) translateX(10px);
+        opacity: 0;
+        transition: all 400ms;
+     }
+     .whatsapp .whatsapp-btn:hover + span{
+        transform: rotateZ(0deg) translateX(0px);
+        opacity: 1;
+     }  
+     @media (max-width:1024px){
+        .whatsapp{
+            top: 2200px;
+        }
+     }
+                                                    /* WHATSAPP CSS ENDED */
+
+                                                /* IMAGE GALLERY CSS STARTS */
+     .containers{
+        /* width: 1500px; */
+        margin-left: 10px;
+        margin-top: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: #f8f8f8;
+        border-left: 10px solid red;
+        /* padding-right: 200px; */
+        animation: appear  linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+     }
+     @keyframes appear{
+        from{
+            opacity: 0;
+            scale: 0.5;
+        }
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+     .containers .heads{
+        width: 50%;
+        padding-bottom: 50px;
+     }
+     .containers .heads h3{
+        font-size: 55px;
+        color: #ff6347;
+        font-weight: bolder;
+        border-bottom: 3px solid #222;
+        padding-bottom: 20px;
+     }
+     .containers .heads h3 span{
+        color: rgb(255, 230, 0);
+        font-weight: 100;
+     }
+     .containers .boxes{
+        width: 900px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+     }
+     .containers .boxes .dream{
+        display: flex;
+        flex-direction: column;
+        width: 32.5%;
+     }
+     .containers .boxes .dream img{
+        /* box-shadow: 0px 15px 30px rgba(0,0,0,0.2); */
+        width: 100%;
+        height: 100%;
+        padding-bottom: 15px;
+        border-radius: 5px;
+        /* object-fit: cover; */
+     }
+     .containers .boxes .dream img:hover{
+        transform: scale(2.0);
+        cursor: pointer;
+        transition: 1.5s ease;
+        /* border: 1px solid red; */
+        /* box-shadow: 5px 5px 10px #ff6347, -5px -5px 10px #ff6347; */
+     }
+     .containers .btn{
+        margin: 40px 0 70px 0;
+        background:#ff6347;
+        padding: 10px 40px;
+        border-radius: 10px;
+        border: none;
+     }
+     .containers .btn a{
+        text-decoration: none;
+        font-size: 25px;
+        color: #f8f8f8;
+        letter-spacing: 3px;
+     }
+     .containers .popup{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        display: none;
+     }
+     .containers .popup .bt1{
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-size: 40px;
+        font-weight: bolder;
+        cursor: pointer;
+        color: #fff;
+        z-index:100;
+        border:1px solid red;
+        border-radius: 50%;
+     }
+     .containers .popup img{
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 5px solid #fff;
+        border-radius: 5px;
+        width: 700px;
+        object-fit: cover;
+     }
+                                                 /* IMAGE GALLERY CSS ENDED */
+                            
+/*------------------------------------------------------- CSS CODE ENDED------------------------------------------------------------------------ */
+
+                                                 
+
+
+
+
+/* ------------------------------------------------------HTML CODE STARTS---------------------------------------------------------------------- */
+
+
+</style>
+<body>
+                                                  <!-- HEADER SECTION STARTS -->
+    <div class="header">
+            <div class="nav">
+                <ul class="sidebar">
+                    <!-- <li onclick="hidesidebar()"><a href=""><i class="fa-regular fa-circle-xmark"></i></a></li> -->
+                    <button onclick="hidesidebar()"><i class="fa-regular fa-circle-xmark"></i></button>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#ab">ABOUT</a></li>
+                    <li><a href="#os">SERVICES</a></li>
+                    <li><a href="demo.html">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                    <li><a href="#cont">CLIENTS</a></li>
+                </ul>
+                <ul>
+                    <li><img src="logo.png"></li>
+                    <li class="hideonmobile"><span><a href="index.html">HOME</a></span></li>
+                    <li  class="hideonmobile"><a href="#ab">ABOUT</a></li>
+                    <li  class="hideonmobile"><a href="#os">SERVICES</a></li>
+                    <li  class="hideonmobile"><a href="#pro">PROJECTS</a></li>
+                    <li  class="hideonmobile"><a href="#contact">CONTACT US</a></li>
+                    <li  class="hideonmobile"><a href="#cont">CLIENTS</a></li>
+                    <!-- <li onclick="showsidebar()"><a href=""><i class="fa-solid fa-bars"></i></a></li> -->
+                    <button onclick="showsidebar()"><i class="fa-solid fa-bars"></i></button>
+
+                </ul>
+            </div>
+            <div class="row r1">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <h1>Welcome to Our New Generation <br>of Buildings</h1>
+                    <!-- <p>Quality You Trust</p> -->
+                    <button><a href="">Get a Quote</a></button>
+                    <button><a href="demo.html">Our Projects</a></button>
+                    <h4>06+ <br><span>years of experience</span></h4>
+                    <h4>1200+ <br><span>>project complete</span</h4>
+                </div>
+
+            </div>
+            
+        </div>
+
+                                                    <!-- HEADER SECTION ENDED -->
+
+                                             <!-- CONTAINER SECTION SECTION STARTS -->
+        <div class="container" id="cont1">
+            <div class="row">
+            <div class="col-lg-3 col-md-6 col-6 box">
+                <i class="fa-solid fa-house"></i>
+                <h3>Professional Builder</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. plicabo dicta maxime quidem.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 box">
+                <i class="fa-solid fa-calendar-days"></i>
+                <h3>We Deliver Quality</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. xplicabo dicta maxime quidem.</p>
+        
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 box">
+                <i class="fa-solid fa-clock"></i>
+                <h3>All Ways on Time</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. explicabo dicta maxime quidem.</p>
+        
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 box">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <h3>We Are Passionate </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. explicabo dicta maxime quidem.</p>
+            </div>
+        </div>
+     </div>
+                                                    <!-- CONTAINER SECTION ENDED -->
+
+                                                    <!-- ABOUT US SECTION STARTS -->
+     <section class="hero">
+        <div class="heading">
+            <h1 id="ab">|About US</h1>
+        </div>
+        <div class="container">
+            <div class="content">
+                <h2>Welcome To Our Website</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda officiis, aspernatur accusamus sunt voluptatum eligendi iure maiores repellendus, quasi iste fuga. Dolorem sapiente maiores architecto nisi, repudiandae dicta aperiam laudantium.</p>
+                 <button class="butt">Learn more</button>
+            </div>
+            <div class="contentimg">
+                <img src="c3.jpg" alt="">
+            </div>
+        </div>
+     </section>
+                                                    <!-- ABOUT US SECTION ENDED -->
+                                                     
+                                                 <!-- OUR SERVICES SECTION STARTS -->
+
+     <div class="wrapper">
+        <h1 id="os">|Our Services</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, enim?</p>
+        <div class="content-box">
+            <div class="card">
+                <i class="fa-solid fa-calendar-days"></i>
+                    <h3>We Deliver Quality</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. xplicabo dicta maxime quidem.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-calendar-days"></i>
+                    <h3>We Deliver Quality</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. xplicabo dicta maxime quidem.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-calendar-days"></i>
+                    <h3>We Deliver Quality</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. xplicabo dicta maxime quidem.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-calendar-days"></i>
+                    <h3>We Deliver Quality</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. xplicabo dicta maxime quidem.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-calendar-days"></i>
+                    <h3>We Deliver Quality</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. xplicabo dicta maxime quidem.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-calendar-days"></i>
+                    <h3>We Deliver Quality</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. xplicabo dicta maxime quidem.</p>
+            </div>
+        </div>
+     </div>
+    </div>
+    </section>
+                                                <!-- OUR SERVICES SECTION ENDED -->
+
+                                                  <!-- CLIENT SECTION STARTS -->
+    <div class="cont">
+        <h1 id="cont">|Client</h1>
+        <h2>What Our Client Tells</h2>
+        <div class="slide-cont active">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="client-img.png" alt="">
+                <div class="user-info">
+                    <h3>John</h3>
+                    <div class="stars">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga odit minima laborum impedit est porro ut rem doloremque in iure, minus iste aperiam.
+                 Fuga aut quo fugit vero doloremque sint.</p>
+            </div>
+        </div>
+        <div class="slide-cont">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="c3.jpg" alt="">
+                <div class="user-info">
+                    <h3>John</h3>
+                    <div class="stars">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga odit minima laborum impedit est porro ut rem doloremque in iure, minus iste aperiam.
+                 Fuga aut quo fugit vero doloremque sint.</p>
+            </div>
+        </div>
+        <div class="slide-cont">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="client-img.png" alt="">
+                <div class="user-info">
+                    <h3>John</h3>
+                    <div class="stars">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga odit minima laborum impedit est porro ut rem doloremque in iure, minus iste aperiam.
+                 Fuga aut quo fugit vero doloremque sint.</p>
+            </div>
+        </div>
+        <div class="slide-cont">
+            <div class="slide">
+                <i class="fas fa-quote-right icon"></i>
+                <div class="user">
+                    <img src="client-img.png" alt="">
+                <div class="user-info">
+                    <h3>John</h3>
+                    <div class="stars">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga odit minima laborum impedit est porro ut rem doloremque in iure, minus iste aperiam.
+                 Fuga aut quo fugit vero doloremque sint.</p>
+            </div>
+        </div>
+        <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+        <div id="prev" class="fas fa-chevron-left"  onclick="prev()"></div>
+        
+    </div>
+                                                  <!-- CLIENT SECTION ENDED -->
+
+                                              <!-- IMAGE GALLERY SECTION STARTS -->
+   
+<div class="containers">
+    <div class="heads">
+        <h3>|Image <span>Gallery</span></h3>
+    </div>
+    <div class="boxes">
+        <div class="dream">
+            <img src="f.jpg" alt="">
+            <img src="f1.jpg" alt="">
+            <img src="f2.jpg" alt="">
+            <img src="c3.jpg" alt="">
+            <img src="b1.jpg" alt=""> 
+        </div>
+        <div class="dream">
+            <img src="f.jpg" alt="">
+            <img src="f1.jpg" alt="">
+            <img src="f2.jpg" alt="">
+            <img src="c3.jpg" alt="">
+            <img src="b1.jpg" alt=""> 
+        </div>
+        <div class="dream">
+            <img src="f.jpg" alt="">
+            <img src="f1.jpg" alt="">
+            <img src="f2.jpg" alt="">
+            <img src="c3.jpg" alt="">
+            <img src="b1.jpg" alt=""> 
+        </div>
+    </div>
+    <div class="btn">
+        <a href="">More</a>
+    </div>
+    <!-- <div class="popup">
+        <button class="bt1" onclick="close()">X</button>
+        <img src="f.jpg" alt="">
+    </div> -->
+</div>
+                                                <!-- IMAGE GALLERY SECTION ENDED -->
+
+                                                  <!-- CONTACT SECTION STARTS-->
+    <section class="contact">
+        <div class="contents">
+            <h1 id="contact">|Contact Us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur eos sint vel perferendis rem incidunt harum ex nulla beatae quas.</p>
+        </div>
+        <div class="contain">
+            <div class="contactInfo">
+                <div class="boxe">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="test">
+                        <h3>|Address</h3>
+                        <p>23/A Iyanar Kovil Street, <br>Mayiladudhurai District, <br>Poraiyar.</p>
+                    </div>
+                </div>
+                <div class="boxe">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="test">
+                        <h3>|Phone</h3>
+                        <p>9629074858</p>
+                    </div>
+                </div>
+                <div class="boxe">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="test">
+                        <h3>|Email</h3>
+                        <p>krishnakumar777a@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactform">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <h2>Send Message</h2>
+                    <div class="inputbox">
+                        <input type="hidden" name="access_key" value="5e91cc2c-edc9-40fe-8f51-279fcd6f62ca">
+                        <input type="text" name="name" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="email" name="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputbox">
+                        <textarea required="required"></textarea>
+                        <span>Type Your Message...</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="submit" name="" value="send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+                                                  <!-- CONTACT SECTION ENDED -->
+
+                                                  <!-- MAP SECTION STARTS -->
+  
+    <section class="map">
+        <div class="box1">
+            <h1><i class="fa-solid fa-location-dot"></i> Our Location</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati sapiente ea
+                 voluptatibus quam iusto natus distinctio similique aperiam impedit nulla.</p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15665.03505103995!2d79.82438934013548!3d11.019201938532298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a551a2724cb9af5%3A0x41de14979bcaca3e!2sPoraiyar%2C%20Tamil%20Nadu%20609307!5e0!3m2!1sen!2sin!4v1735838964403!5m2!1sen!2sin" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+                                                    <!-- MAP SECTION ENDED -->
+
+                                                    <!-- WHATSAPP SECTION STARTS -->
+    <div class="whatsapp">
+        <a class="whatsapp-btn" href="https://wa.me/919629074858"><i class="fa-brands fa-whatsapp"></i></a>
+        <span>Whatsapp</span>
+       
+    </div>
+                                                    <!-- WHATSAPP SECTION ENDED -->
+
+                                                    <!-- FOOTER SECTION STARTS -->
+    <footer>
+        <div class="contains">
+            <div class="footer-content1">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-envelope"></i> Email: krishnakumar777a@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> Phone: +91 9629074858</p>
+                <p><i class="fa-solid fa-location-dot"></i> Address: 123 Street</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#ab">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#os">Our Services</a></li>
+                    <li><a href="#cont">Clients</a></li>
+                    <li><a href="#pro">Our Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://x.com/Log%20in/"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/linkedin/?originalSubdomain=in"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-square-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="button-bar">
+            <p>&copy; 2025 your company. All Rights Reserved</p>
+        </div>
+    </footer>
+                                                        <!-- FOOTER SECTION ENDED -->
+    
+<!---------------------------------------------------------------HTML CODE ENDED----------------------------------------------------------------->
+
+    
+<!--------------------------------------------------------------SCRIPT CODE STARTS---------------------------------------------------------------->
+    
+    <script>
+
+        function showsidebar(){
+            const sidebar=document.querySelector('.sidebar')
+            sidebar.style.display='flex'
+            // document.getElementsByClassName("sidebar").style.display="flex"
+        }
+        function hidesidebar(){
+            const sidebar=document.querySelector('.sidebar')
+            sidebar.style.display='none'
+            // document.getElementsByClassName("sidebar").style.display="none"
+        }
+
+        let slides=document.querySelectorAll('.slide-cont');
+        let index=0;
+        function next(){
+            slides[index].classList.remove('active');
+            index=(index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+        function prev(){
+            slides[index].classList.remove('active');
+            index=(index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        // document.querySelectorAll('.dream img').forEach(image =>{
+        //     image.onclick = () =>{
+        //         document.querySelector('.popup').style.display= 'block';
+        //         document.querySelector('.popup img').src=image.getAttribute('src');
+
+        //     }
+            
+        // });
+        
+        // function close(){
+        //     document.querySelector('.popup').style.display= 'none';
+
+        // }
+        
+
+        
+
+        // documnet.querySelector('.popup .bt1').onclick = () =>{
+        //     document.querySelector('.popup').style.display= 'none';
+        // }
+    </script>
+    <script src="/bootstrap.bundle.min.js"></script>
+
+<!-------------------------------------------------------------SCRIPT CODE ENDED---------------------------------------------------------------->
+ </body>
+</html>
